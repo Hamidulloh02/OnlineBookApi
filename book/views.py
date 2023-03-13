@@ -44,6 +44,7 @@ class FilterListAPIView(generics.ListAPIView):
 #Category______________________________________________
 class CategoryListAPIView(generics.ListAPIView,generics.ListCreateAPIView,generics.RetrieveUpdateDestroyAPIView):
     queryset = Category.objects.filter(is_active=True).order_by('-id')
+    serializer_class = CategorySerializer
     filter_backends = (DjangoFilterBackend,SearchFilter)
     search_fields = ['title']
 
