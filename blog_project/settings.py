@@ -18,7 +18,7 @@ SECRET_KEY = 'django-insecure-cjc*6@5weex4o9yqyi=e^u2k^r+sns@_oga5_kazsc(wwk1&@0
 
 ALLOWED_HOSTS = ['*']
 CSRF_TRUSTED_ORIGINS = ['https://online-bookapi.up.railway.app']
-CORS_ALLOWED_ORIGINS = ['https://online-bookapi.up.railway.app']
+
 CORS_ALLOW_METHODS = [
     "DELETE",
     "GET",
@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'book',
     'accaunts'
 ]
+CORS_ALLOW_ALL_ORIGINS = True
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 SITE_ID = 1
 REST_FRAMEWORK = {
