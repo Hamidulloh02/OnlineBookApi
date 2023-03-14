@@ -75,6 +75,7 @@ SWAGGER_SETTINGS = {
     "USE_SESSION_AUTH": True,
 }
 
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
