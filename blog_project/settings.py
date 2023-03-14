@@ -17,7 +17,7 @@ SECRET_KEY = 'django-insecure-cjc*6@5weex4o9yqyi=e^u2k^r+sns@_oga5_kazsc(wwk1&@0
 # SECURITY WARNING: don't run with debug turned on in production!
 
 ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = ['http://online-bookapi.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://online-bookapi.up.railway.app']
 
 DEBUG = False
 
@@ -79,7 +79,8 @@ MIDDLEWARE = [
 ]
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:3000',
-    'http://localhost:8000'
+    'http://localhost:8000',
+    'https://online-bookapi.up.railway.app'
 )
 ROOT_URLCONF = 'blog_project.urls'
 
