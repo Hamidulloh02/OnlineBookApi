@@ -18,7 +18,15 @@ SECRET_KEY = 'django-insecure-cjc*6@5weex4o9yqyi=e^u2k^r+sns@_oga5_kazsc(wwk1&@0
 
 ALLOWED_HOSTS = ['*']
 CSRF_TRUSTED_ORIGINS = ['https://online-bookapi.up.railway.app']
-
+CORS_ALLOWED_ORIGINS = ['https://online-bookapi.up.railway.app']
+CORS_ALLOW_METHODS = [
+    "DELETE",
+    "GET",
+    "OPTIONS",
+    "PATCH",
+    "POST",
+    "PUT",
+]
 DEBUG = False
 
 # Application definition
@@ -72,15 +80,17 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
+    "corsheaders.middleware.CorsPostCsrfMiddleware",
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-# CORS_ORIGIN_WHITELIST = (
-#     'http://localhost:3000',
-#     'http://localhost:8000',
-# )
+
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:3000',
+    'http://localhost:8000',
+)
 ROOT_URLCONF = 'blog_project.urls'
 
 TEMPLATES = [
